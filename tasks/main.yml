@@ -2,6 +2,7 @@
 - name: Install dependencies
   become: true
   when: ansible_os_family == "Debian"
+  with_items: "{{ dependencies }}"
   apt:
     name: "{{ item }}"
     update_cache: yes
