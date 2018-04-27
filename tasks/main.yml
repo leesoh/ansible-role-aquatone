@@ -1,41 +1,9 @@
 ---
-- name: Install Node
+- name: Install dependencies
   become: true
   when: ansible_os_family == "Debian"
   apt:
-    name: nodejs
-    update_cache: yes
-    state: latest
-
-- name: Install npm
-  become: true
-  when: ansible_os_family == "Debian"
-  apt:
-    name: npm
-    update_cache: yes
-    state: latest
-
-- name: Install Ruby
-  become: true
-  when: ansible_os_family == "Debian"
-  apt:
-    name: ruby2.3
-    update_cache: yes
-    state: latest
-
-- name: Install Ruby Dev
-  become: true
-  when: ansible_os_family == "Debian"
-  apt:
-    name: ruby2.3-dev
-    update_cache: yes
-    state: latest
-
-- name: Install libffi
-  become: true
-  when: ansible_os_family == "Debian"
-  apt:
-    name: libffi-dev
+    name: "{{ item }}"
     update_cache: yes
     state: latest
 

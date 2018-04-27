@@ -1,2 +1,7 @@
 ---
-# vars file for ansible-role-aquatone
+dependencies:
+ - nodejs
+ - npm
+ - ruby2.3
+ - ruby2.3-dev
+ - libffi-dev
