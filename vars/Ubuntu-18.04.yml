@@ -1,0 +1,7 @@
+---
+dependencies:
+  - nodejs
+  - npm
+  - ruby2.5
+  - ruby2.5-dev
+  - libffi-dev
